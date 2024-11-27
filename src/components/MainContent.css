@@ -1,0 +1,19 @@
+
+.content {
+    margin :20px;
+}
+
+.content h1 {
+    color: rgb(70, 146, 247);
+    font-size: 3rem
+}
+
+.content li::marker  {
+    list-style-type: circle;
+    color: blue;
+  }
+
+.content li {
+    font-size: 2rem;
+    color: black;
+}
