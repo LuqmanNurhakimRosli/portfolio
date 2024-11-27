@@ -11,7 +11,6 @@ export default function App () {
       <Navbar />
       <MainContent />
       <Footer />
-      <img src = {`${process.env.PUBLIC_URL}/images/img-home.jpg`} alt="Banner"/>
     </div>
   )
 }
