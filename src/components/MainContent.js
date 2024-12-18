@@ -1,5 +1,4 @@
 import React from 'react'
-import './MainContent.css'
 function MainContent() {
   return (
     <main className='bg-gray-300 py-10 px-6'>
