@@ -12,9 +12,10 @@ function Card(props) {
     const info = props.card.status === 'online' ? "Online" : "Offline";
 
   return (
-    <div className='border border-gray-300 rounded-lg shadow-lg p-4 max-w-sm bg-white'>
-        <div className='font-semibold text-sm text-green-400 bg-white'>{info}</div>
-        <img src={require(`../images/${props.card.image}`)} alt="gambar" />
+    <div className='border border-gray-300 rounded-lg shadow-lg p-4 max-w-sm bg-indigo-300 text-center flex flex-col justify-center'>
+        {/* <img src={require(`../images/${props.card.image}`)} alt="gambar" /> */}
+        <img src = {props.card.image} alt="gambar" className="block mx-auto w-24 sm:w-24 md:w-24 lg:w-24"/>
+        <div className='font-semibold text-base text-black '>{info}</div>
         <div>
             <h2>{props.card.title}</h2>
             <p>{props.card.content}</p>
