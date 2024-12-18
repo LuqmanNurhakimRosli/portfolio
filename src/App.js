@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
+import Home from './components/pages/Home.js';
+import About from './components/pages/About.js';
+import Services from './components/pages/Services.js';
+import Contact from './components/pages/Contact.js';
 
 
 export default function App () {
@@ -12,10 +12,10 @@ export default function App () {
   return (
     <div className='app'>
       <Routes>
-        <Route path='./components/pages/Home.js' element={<Home />} />
-        <Route path='./components/pages/About.js' element={<About />} />
-        <Route path='./components/pages/Services.js' element={<Services />} />
-        <Route path='./components/pages/Contact.js' element={<Contact />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/About' element={<About />} />
+      <Route path='/Services' element={<Services />} />
+      <Route path='/Contact' element={<Contact />} />
       </Routes>
     </div>
   )

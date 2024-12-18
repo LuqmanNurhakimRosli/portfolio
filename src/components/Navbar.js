@@ -14,16 +14,16 @@ function Navbar() {
         </div>
         <ul className='flex space-x-6 font-bold'>
           <li>
-              <Link to='../components/Page/Home.js' className="hover:text-blue-500 transition duration-300" >Home</Link>
+              <Link to='/' className="hover:text-blue-500 transition duration-300" >Home</Link>
           </li> 
           <li>
-          <Link to='../components/Page/About.js' className="hover:text-blue-500 transition duration-300" >About</Link>
+          <Link to='/about' className="hover:text-blue-500 transition duration-300" >About</Link>
           </li>
           <li>
-          <Link to='../components/Page/Services.js' className="hover:text-blue-500 transition duration-300" >Services</Link>
+          <Link to='/Services' className="hover:text-blue-500 transition duration-300" >Services</Link>
             </li>
           <li>
-          <Link to='../components/Page/Contact.js' className="hover:text-blue-500 transition duration-300" >Contact</Link>
+          <Link to='/Contact' className="hover:text-blue-500 transition duration-300" >Contact</Link>
           </li>
         </ul>
       </nav>

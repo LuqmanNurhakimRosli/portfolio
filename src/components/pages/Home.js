@@ -1,9 +1,10 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import MainContent from '../components/MainContent';
-import Card from '../components/Card';
-import cardData from '.../cardData';
+import Navbar from '../Navbar';            // Correct relative path
+import Footer from '../Footer';            // Correct relative path
+import MainContent from '../MainContent';  // Correct relative path
+import Card from '../Card';                // Correct relative path
+import cardData from '../../cardData';     // Correct relative path
+
 
 function Home() {
     const cardArray = cardData.map( card => {
