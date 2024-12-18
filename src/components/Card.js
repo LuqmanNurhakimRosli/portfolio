@@ -12,7 +12,7 @@ function Card(props) {
     const info = props.card.status === 'Beginner' ? "Beginner" : "Immediate";
 
   return (
-    <div>
+    <div >
      
   
     <div className='font-mono border border-gray-300 rounded-lg shadow-lg p-4  bg-indigo-300 text-center flex flex-col space-y-2 w-48'>

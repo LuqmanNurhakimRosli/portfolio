@@ -15,12 +15,12 @@ function Home() {
     <div>
       <Navbar />
       <MainContent />
-      <div className='text-center'>
+      <div className='text-center bg-grayCustom'>
         <h1 className='font-mono text-4xl text-white pt-4'>
           Programming Language
         </h1>
         
-      <div className='flex justify-center'>
+      <div className='flex justify-center '>
         <div className=" grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-14 my-8">
           {cardArray}
         </div>
