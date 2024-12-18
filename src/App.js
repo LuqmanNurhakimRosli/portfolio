@@ -1,51 +1,22 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
-import MainContent from './components/MainContent';
-import Footer from './components/Footer';
-import Poem from './components/Poem';
-import Card from './components/Card';
-import cardData from './cardData';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
 
 
 export default function App () {
-  const cardSession = cardData.map( card => {
-    return <Card 
-        key={card.id}
-        card={card}
-    />
-  })
+  
   return (
-    <div className = "app " >
-      <Navbar />
-      <Poem 
-            joke="Esok cuti"
-            answer="Betul"
-          />
-          <Poem 
-            joke="Esok cuti"
-            answer="Betul"
-          />
-          <Poem 
-            joke="Esok cuti"
-            answer="Betul"
-          /> 
-      <MainContent />
-
-      <div className='text-center'>
-        <h1 className='font-mono text-4xl text-white pt-4'>
-          Programming Language
-        </h1>
-        
-      <div className='flex justify-center'>
-        <div className=" grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-14 my-8">
-          {cardSession}
-        </div>
-      </div>
-      </div>
-      
-
-      <Footer />
+    <div className='app'>
+      <Routes>
+        <Route path='./components/pages/Home.js' element={<Home />} />
+        <Route path='./components/pages/About.js' element={<About />} />
+        <Route path='./components/pages/Services.js' element={<Services />} />
+        <Route path='./components/pages/Contact.js' element={<Contact />} />
+      </Routes>
     </div>
   )
 }

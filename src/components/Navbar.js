@@ -1,4 +1,6 @@
 import React from 'react';
+//guna router unutk navigate ke page lain
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -11,10 +13,18 @@ function Navbar() {
           <h1 className='text-2xl font-bold'>ReactFacts</h1>
         </div>
         <ul className='flex space-x-6 font-bold'>
-          <li> <a href='#home' className='hover:text-blue-500 transition duration-300'>Home </a> </li> 
-          <li>About</li>
-          <li>Services</li>
-          <li>Contact</li>
+          <li>
+              <Link to='../components/Page/Home.js' className="hover:text-blue-500 transition duration-300" >Home</Link>
+          </li> 
+          <li>
+          <Link to='../components/Page/About.js' className="hover:text-blue-500 transition duration-300" >About</Link>
+          </li>
+          <li>
+          <Link to='../components/Page/Services.js' className="hover:text-blue-500 transition duration-300" >Services</Link>
+            </li>
+          <li>
+          <Link to='../components/Page/Contact.js' className="hover:text-blue-500 transition duration-300" >Contact</Link>
+          </li>
         </ul>
       </nav>
     </header>
