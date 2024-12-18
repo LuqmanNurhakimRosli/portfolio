@@ -5,7 +5,7 @@ function MainContent() {
         <div className='container mx-auto'>
          {/* Section Heading */}
           <h1 className='text-4xl font-bold text-center text-gray-700 mb-8 '>
-            Welcome To My Page
+            Welcome To My Yapper
           </h1>
 
         {/* Feature Cards Section */}
@@ -14,15 +14,15 @@ function MainContent() {
           <div className='bg-white shadow-md rounded-lg p-6'>
             <h2 className='text-2xl font-semibold text-black mb-4'>The hansome man</h2>
               <p className='text-gray-600'>
-              Learn the basics of React, the most popular library for building user interfaces.
+              Being one of the most hansome guy in Kuala Selangor and got top 30 Ruby.
               </p>
             
           </div>
         {/* Card 2 */}
         <div className='bg-white shadow-md rounded-lg p-6'>
-            <h2 className='text-2xl font-semibold text-black mb-4'>Suer strong guy</h2>
+            <h2 className='text-2xl font-semibold text-black mb-4'>Super strong guy</h2>
               <p className='text-gray-600'>
-              Discover the power of reusable components to make your code efficient and clean.
+              Discover the power of reusable Exp mind that outplay many players.
               </p>
             
           </div>
@@ -30,7 +30,7 @@ function MainContent() {
           <div className='bg-white shadow-md rounded-lg p-6'>
             <h2 className='text-2xl font-semibold text-black mb-4'>Enhancing the Sigma</h2>
               <p className='text-gray-600'>
-              Integrate state and props seamlessly to create dynamic, interactive UIs.
+              Balmond user, Syamil says he doesn't want to belive me but i act otherwise.
               </p>
             
           </div>

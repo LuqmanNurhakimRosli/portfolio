@@ -8,7 +8,7 @@ function Navbar() {
       <nav className='container mx-auto flex items-center justify-between py-3 px-6'>
         <div className='flex items-center space-x-4 '>
           <img
-            src={require (`../images/Image(1).jpg`)}
+            src={require (`../images/gambar-luqman.jpg`)}
             alt="Banner" className='w-14 h-14 rounded-full'/>
           <h1 className='text-2xl font-bold'>ReactFacts</h1>
         </div>

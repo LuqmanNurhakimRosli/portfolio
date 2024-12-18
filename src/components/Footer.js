@@ -8,11 +8,9 @@ function Footer() {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-20 space-x-16'>
 
           <div className=''>
-            <h2 className='text-lg font-bold mb-4'>About Us</h2>
+            <h2 className='text-lg font-bold mb-4'>About Me</h2>
             <p className='text-gray-400'>
-            ReactFacts is dedicated to providing the best learning resources
-              for mastering React and building modern web applications.
-            </p>
+            Tengah intern sekarang ni kat Cyberjaya, so far jadi best decision sebab jauh gak merantau dan banyak sacrifise daripada my family especially my abang. Terima Kasih Rafiq</p>
           </div>
 
           <div>
@@ -39,8 +37,8 @@ function Footer() {
 
           <div>
             <h2 className='text-lg font-bold mb-4'>Contact Us</h2>
-            <p className='text-gray-400'>Email: support@reactfacts.com</p>
-            <p className='text-gray-400'>Phone: +1 234 567 890</p>
+            <p className='text-gray-400'>Email: luqman@dagangnet.com</p>
+            <p className='text-gray-400'>Phone: +0173942527</p>
             <p className='text-gray-400'>Location: Cyberjaya, Malaysia</p>
           </div>
           </div>
