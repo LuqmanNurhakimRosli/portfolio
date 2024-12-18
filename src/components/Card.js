@@ -9,19 +9,22 @@ function Card(props) {
     // else {
     //     info = "Offline"
     // }
-    const info = props.card.status === 'online' ? "Online" : "Offline";
+    const info = props.card.status === 'Beginner' ? "Beginner" : "Immediate";
 
   return (
-    <div className='border border-gray-300 rounded-lg shadow-lg p-4 max-w-sm bg-indigo-300 text-center flex flex-col justify-center'>
+    <div>
+     
+  
+    <div className='font-mono border border-gray-300 rounded-lg shadow-lg p-4  bg-indigo-300 text-center flex flex-col space-y-2 w-48'>
         {/* <img src={require(`../images/${props.card.image}`)} alt="gambar" /> */}
-        <img src = {props.card.image} alt="gambar" className="block mx-auto w-24 sm:w-24 md:w-24 lg:w-24"/>
-        <div className='font-semibold text-base text-black '>{info}</div>
-        <div>
-            <h2>{props.card.title}</h2>
-            <p>{props.card.content}</p>
+        <img src = {props.card.image} alt="{props.card.title}" className=" mx-auto w-16 h-16 object-contain mb-2"/>
+        <div className='border bg-white border-gray-300 rounded-lg shadow-lg font-semibold text-base text-black px-6  w-fit mx-auto'>{info}</div>
+        <div className=''>
+            <h2 className='text-xl font-semibold'> {props.card.title}</h2>
+            {/* <p>{props.card.content}</p> */}
         </div>
-
-    </div>
+        </div>
+      </div>
   )
 }
 

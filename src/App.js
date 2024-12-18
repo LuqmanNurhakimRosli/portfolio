@@ -16,7 +16,7 @@ export default function App () {
     />
   })
   return (
-    <div className = "app" >
+    <div className = "app " >
       <Navbar />
       <Poem 
             joke="Esok cuti"
@@ -31,7 +31,20 @@ export default function App () {
             answer="Betul"
           /> 
       <MainContent />
-      {cardSession}
+
+      <div className='text-center'>
+        <h1 className='font-mono text-4xl text-white pt-4'>
+          Programming Language
+        </h1>
+        
+      <div className='flex justify-center'>
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-14 my-8">
+          {cardSession}
+        </div>
+      </div>
+      </div>
+      
+
       <Footer />
     </div>
   )
