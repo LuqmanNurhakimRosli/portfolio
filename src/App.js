@@ -38,7 +38,7 @@ export default function App () {
         </h1>
         
       <div className='flex justify-center'>
-        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-14 my-8">
+        <div className=" grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-14 my-8">
           {cardSession}
         </div>
       </div>
