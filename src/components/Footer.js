@@ -10,7 +10,7 @@ function Footer() {
           <div className=''>
             <h2 className='text-lg font-bold mb-4'>About Me</h2>
             <p className='text-gray-400'>
-            Tengah intern sekarang ni kat Cyberjaya, so far jadi best decision sebab jauh gak merantau dan banyak sacrifise daripada my family especially my abang. Terima Kasih Rafiq</p>
+            Tengah intern sekarang ni kat Cyberjaya, so far jadi best decision sebab jauh gak merantau dan banyak sacrifise daripada my family. </p>
           </div>
 
           <div>
