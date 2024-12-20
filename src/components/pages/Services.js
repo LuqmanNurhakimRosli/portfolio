@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
+import memesData from '../Data/memesData'
 
 function Services() {
     return (
