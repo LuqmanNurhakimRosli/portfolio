@@ -4,6 +4,13 @@ import Footer from '../Footer'
 import memesData from '../Data/memesData'
 
 function Services() {
+  function memeButton() {
+    const memeFirst = memesData.data.memes
+    const randomNumber = Math.floor(Math.random() * memeFirst.length)
+    const url = randomNumber[memeFirst].url
+    console.log(url)
+  }
+
     return (
       <section>
           <Navbar />
@@ -26,7 +33,7 @@ function Services() {
                   </input>
                 </label>
   
-                <button className='bg-slate-500 p-2 text-white border-solid border-2 border-indigo- rounded-md col-span-2 w-full sm:w-3/4 md:w-1/2 lg:w-1/3 mx-auto mt-5'>
+                <button onClick={memeButton} className='bg-slate-500 p-2 text-white border-solid border-2 border-indigo- rounded-md col-span-2 w-full sm:w-3/4 md:w-1/2 lg:w-1/3 mx-auto mt-5'>
                     Get a new meme image 🖼
                 </button>
               </form>
