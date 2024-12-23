@@ -12,7 +12,13 @@ function About() {
     })
   }
 
-  const renderThings = addThings.map(thing => <p key={thing}>{thing}</p>)
+  function minusClick() {
+    setAddThings(prevThings => {
+      return prevThings.slice(0, -1)
+    })
+  }
+
+  const renderThings = addThings.map(thing => <p key={thing} className='text-gray-700'>{thing}</p>)
 
   function tolak() {
     setKira(kira - 1)
@@ -23,7 +29,7 @@ function About() {
   }
 
   return (
-    <section className='min-h-screen flex flex-col'>
+    <section className='min-h-screen flex flex-col bg-gray-100'>
       <Navbar />
       <div className='flex-grow container mx-auto p-8'>
         <h1 className='text-4xl font-bold text-center mb-8'>About Me</h1>
@@ -38,8 +44,11 @@ function About() {
           </div>
           <div className='mb-4'>
             <h2 className='text-2xl font-semibold mb-4'>Kira Biri-Biri</h2>
-            <button onClick={addClick} className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 mb-4'>Add Thing</button>
-            <div className='space-y-2'>
+            <div className='flex space-x-4'>
+              <button onClick={addClick} className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700'>Add Thing</button>
+              <button onClick={minusClick} className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700'>Remove Thing</button>
+            </div>
+            <div className='space-y-2 mt-4'>
               {renderThings}
             </div>
           </div>
