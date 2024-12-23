@@ -61,9 +61,7 @@ function Services() {
               <img src={meme} alt='meme' className='rounded-md shadow-md' />
             </div>
           )}
-          <div className='text-center mt-8'>
-            <h2>Your cat is beatifull, {name}!</h2>
-          </div>
+          
 
         </form>
       </div>
