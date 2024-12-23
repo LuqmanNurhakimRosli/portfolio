@@ -21,7 +21,7 @@ function Home() {
         </h1>
         
       <div className='flex justify-center '>
-        <div className=" grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-14 my-8">
+        <div className=" grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-14 my-8">
           {cardArray}
         </div>
       </div>
