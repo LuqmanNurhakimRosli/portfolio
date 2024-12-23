@@ -4,44 +4,73 @@ import Footer from '../Footer'
 import memesData from '../Data/memesData'
 
 function Services() {
-  function memeButton() {
-    const memeFirst = memesData.data.memes
-    const randomNumber = Math.floor(Math.random() * memeFirst.length)
-    const url = randomNumber[memeFirst].url
-    console.log(url)
+  const [name, setName] = React.useState("")
+  const [meme, setMeme] = React.useState("")
+
+  function getMemeImage() {
+    const memeArray = memesData.data.memes
+    const randomMeme = Math.floor(Math.random() * memeArray.length)
+    setMeme(memeArray[randomMeme].url)
   }
 
-    return (
-      <section>
-          <Navbar />
-  
-          <div className='container mx-auto p-28 flex justify-center'>
-              <form className='grid grid-cols-2 gap-4 w-full'>
-                <label className='pl-2'> Top Text
-                  <input
-                      type='text'
-                      placeholder='Left Text'
-                      className='border-solid border-2 border-indigo- rounded-md w-full p-2' >
-                  </input>
-                </label>
-  
-                <label className='pl-2'> Bottom Text
-                  <input
-                      type='text'
-                      placeholder='Left Right'
-                      className='border-solid border-2 border-indigo- rounded-md w-full p-2' >
-                  </input>
-                </label>
-  
-                <button onClick={memeButton} className='bg-slate-500 p-2 text-white border-solid border-2 border-indigo- rounded-md col-span-2 w-full sm:w-3/4 md:w-1/2 lg:w-1/3 mx-auto mt-5'>
-                    Get a new meme image 🖼
-                </button>
-              </form>
+  return (
+    <section>
+      <Navbar />
+
+      <div className='container mx-auto p-8 flex justify-center'>
+        <form className='w-full max-w-lg bg-white p-8 rounded-lg shadow-md'>
+          <div className='mb-4'>
+            <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='topText'>
+              Top Text
+            </label>
+            <input
+              id='topText'
+              type='text'
+              placeholder='Left Text'
+              className='border border-gray-300 rounded-md w-full p-2'
+              //asal nama kosong, bila user isi nama kat palceholder sini, data 
+              //dari placeholder akan dihantar ke setName dan letak ke dalam {name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
-  
-          <Footer />
-      </section>
-    )
+
+          <div className='mb-4'>
+            <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='bottomText'>
+              Bottom Text
+            </label>
+            <input
+              id='bottomText'
+              type='text'
+              placeholder='Left Right'
+              className='border border-gray-300 rounded-md w-full p-2'
+            />
+          </div>
+
+          <div className='flex justify-center'>
+            <button
+              type='button'
+              onClick={getMemeImage}
+              className='bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+            >
+              Get a new meme image 🖼
+            </button>
+          </div>
+
+          {meme && (
+            <div className='mt-6 flex justify-center'>
+              <img src={meme} alt='meme' className='rounded-md shadow-md' />
+            </div>
+          )}
+          <div className='text-center mt-8'>
+            <h2>Your cat is beatifull, {name}!</h2>
+          </div>
+
+        </form>
+      </div>
+
+      <Footer />
+    </section>
+  )
 }
 
 export default Services
