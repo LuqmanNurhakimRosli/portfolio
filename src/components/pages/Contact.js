@@ -5,9 +5,9 @@ import Star from '../Star'
 
 function Contact() {
   const [contact, setContact] = useState({
-    name: "Luqman",
-    email: "luqman@example.com",
-    age: "20",
+    name: "Luqman Nurhakim",
+    email: "luqmanrosli907@gmail.com",
+    status: "Having Internship",
     isFavourite: true
   })
 
@@ -25,9 +25,9 @@ function Contact() {
   }
 
   return (
-    <section className={`min-h-screen flex flex-col ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}>
+    <section className={`min-h-screen flex flex-col ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-white'}`}>
       <Navbar />
-      <article className={`p-8 rounded-lg shadow-lg mx-auto w-80 my-8 ${isDarkMode ? 'bg-gray-800' : 'bg-gradient-to-r from-blue-500 to-purple-500'}`}>
+      <article className={`bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-lg shadow-lg mx-auto w-80 my-8  `}>
         <h1 className='text-4xl font-bold text-center mb-8'>About Me</h1>
         <div className='flex justify-center mb-4'>
           <img src='/images/gambar-luqman.jpg' alt='Profile' className='w-32 h-32 rounded-full shadow-md' />
@@ -39,7 +39,7 @@ function Contact() {
 
         <h2 className='text-xl font-semibold text-center mb-2'>{contact.name}</h2>
         <h2 className='text-xl font-semibold text-center mb-2'>{contact.email}</h2>
-        <p className='text-center font-semibold mb-2'>{contact.age} years old</p>
+        <p className='text-center font-semibold mb-2'>{contact.status} </p>
       </article>
       <div className='flex justify-center mb-8'>
         <button
