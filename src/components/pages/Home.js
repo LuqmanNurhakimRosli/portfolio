@@ -15,7 +15,7 @@ function Home() {
             <Navbar />
             <main className='flex-grow'>
                 <MainContent />
-                <div className='text-center bg-gray-800 py-8'>
+                <div className='text-center bg-stone-600 py-8'>
                     <h1 className='font-mono text-4xl text-white pt-4'>
                         Programming Language
                     </h1>
