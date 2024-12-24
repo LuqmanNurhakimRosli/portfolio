@@ -33,7 +33,7 @@ function Contact() {
 
         <h2 className='text-xl font-semibold text-center text-white mb-2'>{contact.name}</h2>
         <h2 className='text-xl font-semibold text-center text-white mb-2'>{contact.email}</h2>
-        <p className='text-center font-semibold text-gray-200 mb-2'>{contact.age} years old</p>
+        <p className='text-center text-gray-200 mb-2'>{contact.age} years old</p>
       </article>
       <Footer />
     </section>
