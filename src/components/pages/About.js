@@ -50,7 +50,7 @@ function About() {
       <article className='bg-white p-8 rounded-lg shadow-md mx-auto w-80 my-8 '>
       <h1 className='text-4xl font-bold text-center mb-8'>About Me</h1>
         <div className='flex justify-center mb-4'>
-          <img src='/images/gambar-profile.jpg' alt='Profile' className='w-32 h-32 rounded-full shadow-md' />
+          <img src='/images/gambar-luqman.jpg' alt='Profile' className='w-32 h-32 rounded-full shadow-md' />
         </div> 
         <div className='flex justify-center mb-4'>
           <img onClick={onStar} src={`/images/${starIcon}`} alt='Star Icon' className='w-8 h-8 cursor-pointer' />
