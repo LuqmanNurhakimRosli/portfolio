@@ -1,17 +1,37 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import memesData from '../Data/memesData'
 
 function Services() {
   const [name, setName] = React.useState("")
-  const [meme, setMeme] = React.useState("")
+  // const [meme, setMeme] = React.useState("")
+  const [meme,setMeme] = useState({
+    topText:'',
+    bottomText:'',
+    memeImage: 'https://i.imgflip.com/16iyn1.jpg'
+  })
+
+  const[allMemeImage, setAllMemeImage] = useState(memesData)
 
   function getMemeImage() {
-    const memeArray = memesData.data.memes
+    const memeArray = allMemeImage.data.memes
     const randomMeme = Math.floor(Math.random() * memeArray.length)
-    setMeme(memeArray[randomMeme].url)
+    const url = memeArray[randomMeme].url
+    setMeme(prevMeme => 
+      (
+       { ...prevMeme,
+        memeImage: url
+      }
+    ))
+
   }
+
+  // function getMemeImage() {
+  //   const memeArray = memesData.data.memes
+  //   const randomMeme = Math.floor(Math.random() * memeArray.length)
+  //   setMeme(memeArray[randomMeme].url)
+  // }
 
   return (
     <section>
@@ -58,7 +78,7 @@ function Services() {
 
           {meme && (
             <div className='mt-6 flex justify-center'>
-              <img src={meme} alt='meme' className='rounded-md shadow-md' />
+              <img src={meme.memeImage} alt='meme' className='rounded-md shadow-md' />
             </div>
           )}
           
