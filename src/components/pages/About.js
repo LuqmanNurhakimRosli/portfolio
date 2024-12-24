@@ -50,10 +50,10 @@ function About() {
       <article className='bg-white p-8 rounded-lg shadow-md mx-auto w-80 my-8 '>
       <h1 className='text-4xl font-bold text-center mb-8'>About Me</h1>
         <div className='flex justify-center mb-4'>
-          <img onClick={onStar} src={`/images/${starIcon}`} alt='Star Icon' className='w-8 h-8 cursor-pointer' />
-        </div>
-        <div className='flex justify-center mb-4'>
           <img src='/images/gambar-profile.jpg' alt='Profile' className='w-32 h-32 rounded-full shadow-md' />
+        </div> 
+        <div className='flex justify-center mb-4'>
+          <img onClick={onStar} src={`/images/${starIcon}`} alt='Star Icon' className='w-8 h-8 cursor-pointer' />
         </div>
         <h2 className='text-2xl font-semibold text-center mb-2'>{contact.name}</h2>
         <p className='text-center text-gray-700 mb-2'>{contact.age} years old</p>
