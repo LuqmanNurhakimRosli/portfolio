@@ -54,6 +54,9 @@ function About() {
           </div>
         </div>
       </div>
+      <article >
+        
+      </article>
       <Footer />
     </section>
   )
