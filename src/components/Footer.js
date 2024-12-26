@@ -35,7 +35,7 @@ function Footer() {
             <div>
               <h2 className='text-lg font-bold mb-4'>Contact Me</h2>
               <p className='text-gray-400'>Email: luqman@dagangnet.com</p>
-              <p className='text-gray-400'>Phone: +017394</p>
+              <p className='text-gray-400'>Phone: +01739</p>
               <p className='text-gray-400'>Location: Cyberjaya, Malaysia</p>
             </div>
           </div>
