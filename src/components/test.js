@@ -34,3 +34,14 @@ export default function Test() {
     )
     
 }
+
+
+
+function toggle(id) {
+    setElement (prevElement => {
+        return prevElement.map( element => {
+            return element.id === id ? {...element, status: !element.status} : element
+        })
+    })
+}
+
