@@ -44,5 +44,27 @@ function toggle(id) {
     })
 }
 
+
+const [message, setMessage] = React.useState("a", "b")
+
+// 1.First way
+<div>
+    <h1>{
+    message.length === 0 ?
+    "No message" : "You have {message.length} messages" 
+    } 
+    </h1>
+</div>
+
+// 2. Second way
+function messageAppear () {
+    message.length === 0 ? "No message" : "You have {message.length} messages"
+}
+
+<div>
+    <h1>{messageAppear()}</h1>
+</div>
+
+
 // 1. conditional rendering 
 
