@@ -34,6 +34,8 @@ export default function Test() {
     )
     
 }
+
+//change state without changing the other state
 function toggle(id) {
     setElement (prevElement => {
         return prevElement.map( element => {
