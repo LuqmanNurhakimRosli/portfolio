@@ -44,3 +44,5 @@ function toggle(id) {
     })
 }
 
+// 1. conditional rendering 
+
