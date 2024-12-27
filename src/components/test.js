@@ -65,6 +65,27 @@ function messageAppear () {
     <h1>{messageAppear()}</h1>
 </div>
 
+function Joker(props) {
+    const [isShown, setShown] = React.useState(false);
+
+    function toggleClick() {
+        setShown( prevShown => !prevShown)
+    }
+
+
+
+    return (
+        <div className= {`  ${toggleCLick ? 'bg-black' : 'bg-white' }` }>
+            <h1>{props.head}</h1>
+            {isShown && <h2>{props.pucnhline}</h2>}
+            <button onClick={toggleClick} >
+                {isShown ? "Tunjuk" : "Sembunyi"}
+            </button>
+        </div>
+    )
+}
+
+
 
 // 1. conditional rendering 
 
