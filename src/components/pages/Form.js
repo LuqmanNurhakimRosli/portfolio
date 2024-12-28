@@ -4,19 +4,31 @@ import Footer from '../Footer'
 
 function Form() {
   const [dataForm, setDataForm] = useState 
-  ({ firstName: '', lastName:'',email:'', comment:''})
+  ({ firstName: '', lastName:'',email:'', comment:'',status : true})
 
-  console.log(dataForm)
+  // console.log(dataForm)
+
+  // function handleChange(event) {
+  //   setDataForm  ( prevDataForm => {
+  //     return {
+  //       ...prevDataForm,
+  //       [event.target.name] : event.target.value
+  //     }
+  //   })
+  // }
+
 
   function handleChange(event) {
-    setDataForm ( prevDataForm => {
+    const {name, type, value, checked} = event.target
+    setDataForm(prevDataForm => {
       return {
         ...prevDataForm,
-        [event.target.name] : event.target.value
+        [name] : type === 'checkbox' ? checked : value
+        
       }
     })
+    console.log(name, type, value)
   }
-
 
 
   return (
@@ -79,6 +91,20 @@ function Form() {
               value={dataForm.comment}
               className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
             />
+          </div>
+
+          <div className='mb-4'>
+            <input 
+              type='checkbox'
+              id='status'
+              name='status'
+              onChange={handleChange}
+              checked={dataForm.status}
+            />
+            <label htmlFor='status' 
+                className='ml-2 text-sm font-medium text-gray-700 cursor-pointer select-none'>
+              Do you agree with our terms and conditions?
+            </label>
           </div>
         </form>
       </div>
