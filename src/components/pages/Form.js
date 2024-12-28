@@ -4,7 +4,7 @@ import Footer from '../Footer'
 
 function Form() {
   const [dataForm, setDataForm] = useState 
-  ({ firstName: '', lastName:'',email:''})
+  ({ firstName: '', lastName:'',email:'', comment:''})
 
   console.log(dataForm)
 
@@ -64,6 +64,19 @@ function Form() {
               name='email'
               onChange={handleChange}
               value={dataForm.email}
+              className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+            />
+          </div>
+
+          <div className='mb-4'>
+          <label className='block text-gray-700 text-sm font-bold mb-2'>
+              Comment
+            </label>
+            <textarea 
+              placeholder='Enter your comment here' 
+              name='comment'
+              onChange={handleChange}
+              value={dataForm.comment}
               className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
             />
           </div>
