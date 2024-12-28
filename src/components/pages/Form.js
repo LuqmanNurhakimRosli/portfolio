@@ -4,7 +4,8 @@ import Footer from '../Footer'
 
 function Form() {
   const [dataForm, setDataForm] = useState 
-  ({ firstName: '', lastName:'',email:'', comment:'',status : false, statusStudent:''})
+  ({ firstName: '', lastName:'',email:'', 
+    comment:'',status : false, statusStudent:'', color:''})
 
   // console.log(dataForm)
 
@@ -172,6 +173,26 @@ function Form() {
             </div>
           </div>
         </fieldset>
+
+
+        <div className='mb-4'>
+        <label htmlFor='color' className='block text-gray-700 text-sm font-bold mb-2'>
+          Choose a Color
+        </label>
+        <select
+          id='color'
+          name='color'
+          value={dataForm.color}
+          onChange={handleChange}
+          className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white'
+        >
+          <option value=''>--- Choose ---</option>
+          <option value='red'>Red</option>
+          <option value='blue'>Blue</option>
+          <option value='yellow'>Yellow</option>
+          <option value='green'>Green</option>
+        </select>
+      </div>
 
 
         </form>
