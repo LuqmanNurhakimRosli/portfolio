@@ -4,7 +4,7 @@ import Footer from '../Footer'
 
 function Form() {
   const [dataForm, setDataForm] = useState 
-  ({ firstName: '', lastName:'',email:'', comment:'',status : true})
+  ({ firstName: '', lastName:'',email:'', comment:'',status : false})
 
   // console.log(dataForm)
 
@@ -17,6 +17,9 @@ function Form() {
   //   })
   // }
 
+  function statusCheck() {
+    return dataForm.status ? 'Thank you for agreeing' : 'Consider agree to the terms'
+  }
 
   function handleChange(event) {
     const {name, type, value, checked} = event.target
@@ -103,7 +106,7 @@ function Form() {
             />
             <label htmlFor='status' 
                 className='ml-2 text-sm font-medium text-gray-700 cursor-pointer select-none'>
-              Do you agree with our terms and conditions?
+              {statusCheck()}
             </label>
           </div>
         </form>
