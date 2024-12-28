@@ -35,6 +35,7 @@ function Form() {
               placeholder='Enter your first name' 
               name='firstName'
               onChange={handleChange}
+              value={dataForm.firstName}
               className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
             />
           </div>
@@ -48,6 +49,7 @@ function Form() {
               placeholder='Enter your last name' 
               name='lastName'
               onChange={handleChange}
+              value={dataForm.lastName}
               className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
             />
           </div>
@@ -61,6 +63,7 @@ function Form() {
               placeholder='Enter your email' 
               name='email'
               onChange={handleChange}
+              value={dataForm.email}
               className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
             />
           </div>
