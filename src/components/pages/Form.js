@@ -4,7 +4,7 @@ import Footer from '../Footer'
 
 function Form() {
   const [dataForm, setDataForm] = useState 
-  ({ firstName: '', lastName:'',email:'', comment:'',status : false})
+  ({ firstName: '', lastName:'',email:'', comment:'',status : false, statusStudent:''})
 
   // console.log(dataForm)
 
@@ -87,6 +87,7 @@ function Form() {
           <label className='block text-gray-700 text-sm font-bold mb-2'>
               Comment
             </label>
+
             <textarea 
               placeholder='Enter your comment here' 
               name='comment'
@@ -109,6 +110,70 @@ function Form() {
               {statusCheck()}
             </label>
           </div>
+
+          <fieldset className='mb-6 p-4 border border-gray-300 rounded-md'>
+          <legend className='text-lg font-semibold px-2 text-gray-700'>
+            Current Student Status
+          </legend>
+
+          <div className='space-y-2'>
+            <div className='flex items-center'>
+              <input 
+                type='radio'
+                id='studying'
+                name='statusStudent'
+                value='studying'
+                onChange={handleChange}
+                checked={dataForm.statusStudent === 'studying'}
+                className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500'
+              />
+              <label 
+                htmlFor='studying' 
+                className='ml-2 text-sm font-medium text-gray-700 cursor-pointer'
+              >
+                Studying
+              </label>
+            </div>
+
+            <div className='flex items-center'>
+              <input 
+                type='radio'
+                id='hiatus'
+                name='statusStudent'
+                value='hiatus'
+                onChange={handleChange}
+                checked={dataForm.statusStudent === 'hiatus'}
+                className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500'
+              />
+              <label 
+                htmlFor='hiatus' 
+                className='ml-2 text-sm font-medium text-gray-700 cursor-pointer'
+              >
+                On Hiatus
+              </label>
+            </div>
+
+            <div className='flex items-center'>
+              <input 
+                type='radio'
+                id='graduated'
+                name='statusStudent'
+                value='graduated'
+                onChange={handleChange}
+                checked={dataForm.statusStudent === 'graduated'}
+                className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500'
+              />
+              <label 
+                htmlFor='graduated' 
+                className='ml-2 text-sm font-medium text-gray-700 cursor-pointer'
+              >
+                Graduated
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+
         </form>
       </div>
       <Footer />
