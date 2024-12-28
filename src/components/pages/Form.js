@@ -18,9 +18,16 @@ function Form() {
   //   })
   // }
 
+  const id = React.useId()
+
   function statusCheck() {
     return dataForm.status ? 'Thank you for agreeing' : 'Consider agree to the terms'
   }
+
+function handleSubmit(event) {
+  event.preventDefault()
+  console.log(dataForm)
+}
 
   function handleChange(event) {
     const {name, type, value, checked} = event.target
@@ -41,12 +48,13 @@ function Form() {
       <div className='container mx-auto p-8'>
         <h1 className='text-3xl font-bold text-center mb-8'>Form Page</h1>
 
-        <form className='max-w-md mx-auto bg-white p-8 rounded-lg shadow-md'>
+        <form onSubmit={handleSubmit} className='max-w-md mx-auto bg-white p-8 rounded-lg shadow-md'>
           <div className='mb-4'>
-            <label className='block text-gray-700 text-sm font-bold mb-2'>
+            <label htmlFor={id + "firstName" } className='block text-gray-700 text-sm font-bold mb-2'>
               First Name
             </label>
             <input 
+            id={id + "firstName" }
               type='text' 
               placeholder='Enter your first name' 
               name='firstName'
@@ -57,10 +65,11 @@ function Form() {
           </div>
 
           <div className='mb-4'>
-            <label className='block text-gray-700 text-sm font-bold mb-2'>
+            <label htmlFor={id + '-lastName'} className='block text-gray-700 text-sm font-bold mb-2'>
               Last Name
             </label>
             <input 
+            id={id + '-lastName'}
               type='text' 
               placeholder='Enter your last name' 
               name='lastName'
@@ -71,10 +80,11 @@ function Form() {
           </div>
           
           <div className='mb-4'>
-            <label className='block text-gray-700 text-sm font-bold mb-2'>
+            <label htmlFor={id + '-email'} className='block text-gray-700 text-sm font-bold mb-2'>
               Email
             </label>
             <input 
+            id={id + '-email'}
               type='email' 
               placeholder='Enter your email' 
               name='email'
@@ -85,11 +95,12 @@ function Form() {
           </div>
 
           <div className='mb-4'>
-          <label className='block text-gray-700 text-sm font-bold mb-2'>
+          <label htmlFor={id + '-comment'} className='block text-gray-700 text-sm font-bold mb-2'>
               Comment
             </label>
 
             <textarea 
+            id={id + '-comment'}
               placeholder='Enter your comment here' 
               name='comment'
               onChange={handleChange}
@@ -101,12 +112,12 @@ function Form() {
           <div className='mb-4'>
             <input 
               type='checkbox'
-              id='status'
+              id={id + '-status'}
               name='status'
               onChange={handleChange}
               checked={dataForm.status}
             />
-            <label htmlFor='status' 
+            <label htmlFor={id + '-status'}
                 className='ml-2 text-sm font-medium text-gray-700 cursor-pointer select-none'>
               {statusCheck()}
             </label>
@@ -121,7 +132,7 @@ function Form() {
             <div className='flex items-center'>
               <input 
                 type='radio'
-                id='studying'
+                id={id + '-studying'}
                 name='statusStudent'
                 value='studying'
                 onChange={handleChange}
@@ -129,7 +140,7 @@ function Form() {
                 className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500'
               />
               <label 
-                htmlFor='studying' 
+                htmlFor={id + '-studying'} 
                 className='ml-2 text-sm font-medium text-gray-700 cursor-pointer'
               >
                 Studying
@@ -139,7 +150,7 @@ function Form() {
             <div className='flex items-center'>
               <input 
                 type='radio'
-                id='hiatus'
+                id={id + '-hiatus'}
                 name='statusStudent'
                 value='hiatus'
                 onChange={handleChange}
@@ -147,7 +158,7 @@ function Form() {
                 className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500'
               />
               <label 
-                htmlFor='hiatus' 
+                htmlFor={id + '-hiatus'}
                 className='ml-2 text-sm font-medium text-gray-700 cursor-pointer'
               >
                 On Hiatus
@@ -157,7 +168,7 @@ function Form() {
             <div className='flex items-center'>
               <input 
                 type='radio'
-                id='graduated'
+                id={id + '-graduated'}
                 name='statusStudent'
                 value='graduated'
                 onChange={handleChange}
@@ -165,7 +176,7 @@ function Form() {
                 className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500'
               />
               <label 
-                htmlFor='graduated' 
+                htmlFor={id + '-graduated'}
                 className='ml-2 text-sm font-medium text-gray-700 cursor-pointer'
               >
                 Graduated
@@ -176,11 +187,11 @@ function Form() {
 
 
         <div className='mb-4'>
-        <label htmlFor='color' className='block text-gray-700 text-sm font-bold mb-2'>
+        <label htmlFor={id + '-color'} className='block text-gray-700 text-sm font-bold mb-2'>
           Choose a Color
         </label>
         <select
-          id='color'
+          id={id + '-color'}
           name='color'
           value={dataForm.color}
           onChange={handleChange}
@@ -194,6 +205,10 @@ function Form() {
         </select>
       </div>
 
+      <button className='w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+      >
+        Submit
+      </button>
 
         </form>
       </div>
