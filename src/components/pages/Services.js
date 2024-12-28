@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import memesData from '../Data/memesData'
@@ -87,11 +86,6 @@ function Services() {
         </form>
       </div>
 
-      <div>
-        <button>
-          <Link to='/Form'>Form Page</Link>
-        </button>
-      </div>
 
       <Footer />
     </section>

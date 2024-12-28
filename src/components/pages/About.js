@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 
@@ -56,6 +57,14 @@ function About() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className='flex justify-center mt-8 pb-8'>
+        <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+          <Link to='/Form' className='no-underline text-white'>
+            Form Page
+          </Link>
+        </button>
       </div>
       
       <Footer />

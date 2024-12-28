@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/pages/Home.js';
+import Form from './components/pages/Form.js';
 import About from './components/pages/About.js';
 import Services from './components/pages/Services.js';
 import Contact from './components/pages/Contact.js';
@@ -19,6 +20,7 @@ export default function App () {
       <Route path='/About' element={<About />} />
       <Route path='/Services' element={<Services />} />
       <Route path='/Contact' element={<Contact />} />
+      <Route path='/Form' element={<Form />} />
       </Routes>
       <Analytics />
     </div>
