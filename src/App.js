@@ -8,6 +8,7 @@ import Services from './components/pages/Services.js';
 import MemePage from './components/pages/MemePage.js';
 import Contact from './components/pages/Contact.js';
 import { Analytics } from "@vercel/analytics/react";
+import Projects from './components/pages/Projects.js';
 
 
 
@@ -19,7 +20,7 @@ export default function App () {
       <Route path='*' element={<h1>404 - Page Not Found</h1>} />
       <Route path='/' element={<Home />} />
       <Route path='/About' element={<About />} />
-      <Route path='/Services' element={<Services />} />
+      <Route path='/Projects' element={<Projects />} />
       <Route path='/Contact' element={<Contact />} />
       <Route path='/Form' element={<Form />} />
       <Route path='/MemePage' element={<MemePage />} />

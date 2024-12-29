@@ -3,7 +3,7 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 import { Link } from 'react-router-dom'
 
-function Services() {
+function Projects() {
   return (
     <section className="min-h-screen flex flex-col bg-gray-200">
       <Navbar />
@@ -16,6 +16,7 @@ function Services() {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 mx-auto mt-4 rounded-full"></div>
            </h1>
         
+        {/* Profile Profile */}
         <div className="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="relative">
             <img 
@@ -45,4 +46,4 @@ function Services() {
   )
 }
 
-export default Services
+export default Projects

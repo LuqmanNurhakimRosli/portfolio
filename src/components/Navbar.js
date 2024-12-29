@@ -34,8 +34,8 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/services" className="hover:text-blue-500 transition duration-300">
-              Services
+            <Link to="/projects" className="hover:text-blue-500 transition duration-300">
+              Projects
             </Link>
           </li>
           <li>
