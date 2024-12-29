@@ -4,7 +4,6 @@ import Footer from '../Footer'
 import memesData from '../Data/memesData'
 
 function Services() {
-  const [name, setName] = React.useState("")
   // const [meme, setMeme] = React.useState("")
   const [meme,setMeme] = useState({
     topText:'',
@@ -27,6 +26,16 @@ function Services() {
 
   }
 
+  function handleChange(event) {
+    const {name, value} = event.target
+    setMeme (prevMeme => {
+      return {
+        ...prevMeme,
+        [name] : value
+      }
+    })
+  }
+
 
   return (
     <section>
@@ -43,9 +52,8 @@ function Services() {
               type='text'
               placeholder='Left Text'
               className='border border-gray-300 rounded-md w-full p-2'
-              //asal nama kosong, bila user isi nama kat palceholder sini, data 
-              //dari placeholder akan dihantar ke setName dan letak ke dalam {name}
-              onChange={(e) => setName(e.target.value)}
+              name='topText'
+              onChange={handleChange}
             />
           </div>
 
@@ -58,6 +66,8 @@ function Services() {
               type='text'
               placeholder='Left Right'
               className='border border-gray-300 rounded-md w-full p-2'
+              name='bottomText'
+              onChange={handleChange}
             />
           </div>
 
@@ -71,11 +81,12 @@ function Services() {
             </button>
           </div>
 
-          {meme && (
+          
             <div className='mt-6 flex justify-center'>
               <img src={meme.memeImage} alt='meme' className='rounded-md shadow-md' />
+              <h2>{meme.topText} </h2>
+              <h2>{meme.bottomText} </h2>
             </div>
-          )}
           
 
         </form>
