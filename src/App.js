@@ -4,11 +4,10 @@ import './App.css';
 import Home from './components/pages/Home.js';
 import Form from './components/pages/Form.js';
 import About from './components/pages/About.js';
-import Services from './components/pages/Services.js';
+import Projects from './components/pages/Projects.js';
 import MemePage from './components/pages/MemePage.js';
 import Contact from './components/pages/Contact.js';
 import { Analytics } from "@vercel/analytics/react";
-import Projects from './components/pages/Projects.js';
 
 
 
