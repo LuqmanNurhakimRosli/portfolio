@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import memesData from '../Data/memesData'
+import { downloadMeme } from '../memeDownload'
 
 function Services() {
   // const [meme, setMeme] = React.useState("")
@@ -96,6 +97,21 @@ function Services() {
                 {meme.bottomText}
               </h2>
             </div>
+          </div>
+
+          <div className="flex justify-center mt-6 mb-4">
+            <button
+              onClick={async () => {
+                try {
+                  await downloadMeme(meme);
+                } catch (err) {
+                  console.error('Failed to download meme:', err);
+                }
+              }}
+              className='bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+            >
+              Download Meme 📥
+            </button>
           </div>
 
  
