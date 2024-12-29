@@ -27,11 +27,6 @@ function Services() {
 
   }
 
-  // function getMemeImage() {
-  //   const memeArray = memesData.data.memes
-  //   const randomMeme = Math.floor(Math.random() * memeArray.length)
-  //   setMeme(memeArray[randomMeme].url)
-  // }
 
   return (
     <section>
