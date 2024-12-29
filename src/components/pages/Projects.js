@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import { projectsData } from '../../data/projectsData'
-import ProjectCard from '../ProjectCard'
+import { projectsData } from '../Data/ProjectsData'
+import ProjectCard from '../render/ProjectCard'
 
 function Projects() {
   return (
