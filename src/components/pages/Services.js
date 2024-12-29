@@ -82,11 +82,23 @@ function Services() {
           </div>
 
           
-            <div className='mt-6 flex justify-center'>
-              <img src={meme.memeImage} alt='meme' className='rounded-md shadow-md' />
-              <h2>{meme.topText} </h2>
-              <h2>{meme.bottomText} </h2>
+          <div className='mt-6 flex justify-center'>
+            <div className='relative'>
+              <img 
+                src={meme.memeImage} 
+                alt='meme' 
+                className='rounded-md shadow-md max-w-lg'
+              />
+              <h2 className='absolute top-4 left-1/2 transform -translate-x-1/2 text-5xl font-bold text-white uppercase text-center w-full px-4 break-words text-stroke'>
+                {meme.topText}
+              </h2>
+              <h2 className='absolute bottom-4 left-1/2 transform -translate-x-1/2 text-5xl font-bold text-white uppercase text-center w-full px-4 break-words text-stroke'>
+                {meme.bottomText}
+              </h2>
             </div>
+          </div>
+
+ 
           
 
         </form>
