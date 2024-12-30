@@ -14,7 +14,7 @@ function MemePage() {
   const [meme,setMeme] = useState({
     topText:'',
     bottomText:'',
-    memeImage: 'https://i.imgflip.com/345v97.jpg'
+    memeImage: 'https://i.imgflip.com/1bhw.jpg'
   })
 
   const[allMemeImage, setAllMemeImage] = useState(memesData)
@@ -44,7 +44,7 @@ function MemePage() {
 
 
   return (
-    <section className={`min-h-screen flex flex-col ${darkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
+    <section className={`min-h-screen flex flex-col ${darkMode ? 'bg-gray-500' : 'bg-gray-100'}`}>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       
       <div className='container mx-auto px-4 py-8'>
