@@ -9,7 +9,7 @@ function Navbar(props) {
   };
 
   return (
-    <header className={`${props.darkMode ? 'bg-black text-white' : 'bg-white text-black'} shadow-md`}>
+    <header className={`${props.darkMode ? 'bg-indigo-950 text-white' : 'bg-white text-black'} shadow-md`}>
       <nav className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo and Title */}
         <div className="flex items-center space-x-4">
@@ -88,7 +88,7 @@ function Navbar(props) {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className={`md:hidden ${props.darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
+        <div className={`md:hidden ${props.darkMode ? 'bg-indigo-950 text-white' : 'bg-white text-black'}`}>
           <ul className="flex flex-col items-center space-y-4 py-4">
             <li>
               <Link
