@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+function Navbar(props) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <header className="bg-gray-800 text-white">
+    <header className={`${props.darkMode ? 'bg-black text-white' : 'bg-white text-black'} shadow-md`}>
       <nav className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo and Title */}
         <div className="flex items-center space-x-4">
           <img
-            src="/images/brandLuqman.png" // Use the relative URL path
+            src="/images/brandLuqman.png"
             alt="Banner"
-            className="w-20 h-20 rounded-full" // Adjusted size
+            className="w-20 h-20 rounded-full"
           />
           <h1 className="text-2xl font-bold">Luqman Nurhakim</h1>
         </div>
@@ -44,6 +44,24 @@ function Navbar() {
             </Link>
           </li>
         </ul>
+
+        {/* Dark Mode Toggle */}
+        <div className="flex items-center space-x-2">
+          <p className="text-sm">Light</p>
+          <div
+            className={`w-10 h-5 flex items-center rounded-full p-1 cursor-pointer ${
+              props.darkMode ? 'bg-blue-500' : 'bg-gray-300'
+            }`}
+            onClick={props.toggleDarkMode}
+          >
+            <div
+              className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
+                props.darkMode ? 'translate-x-5' : 'translate-x-0'
+              }`}
+            ></div>
+          </div>
+          <p className="text-sm">Dark</p>
+        </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -94,7 +112,7 @@ function Navbar() {
         </div>
       )}
     </header>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

@@ -8,14 +8,18 @@ import cardData from '../Data/cardData'    // Correct relative path
 function Home() {
     const [darkMode, setDarkMode] = React.useState(true);
 
-    
+    function toggleDarkMode(){
+        setDarkMode(prevDarkMode => !prevDarkMode);
+    }
+
+
     const cardArray = cardData.map(card => {
         return <Card key={card.id} card={card} />
     })
 
     return (
         <div className='min-h-screen flex flex-col'>
-            <Navbar />
+            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
             <main className='flex-grow'>
                 <MainContent />
                 <div className='text-center bg-stone-600 py-8'>
