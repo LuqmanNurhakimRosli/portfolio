@@ -23,7 +23,7 @@ function Navbar(props) {
 
         {/* Navigation Links and Dark Mode Toggle */}
         <div className="hidden md:flex items-center space-x-6">
-          <ul className="flex space-x-6 font-bold">
+          <ul className="flex space-x-6 font-bold ">
             <li>
               <Link to="/" className="hover:text-blue-500 transition duration-300">
                 Home
@@ -86,45 +86,77 @@ function Navbar(props) {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+    {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className={`md:hidden ${props.darkMode ? 'bg-indigo-950 text-white' : 'bg-white text-black'}`}>
-          <ul className="flex flex-col items-center space-y-4 py-4">
-            <li>
-              <Link
-                to="/"
-                className={`hover:text-blue-500 transition duration-300 ${props.darkMode ? 'text-white' : 'text-black'}`}
+        <div 
+          className={`md:hidden fixed top-16 left-0 right-0 z-50 transition-all duration-300 ease-in-out
+            ${props.darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'}
+            border-t ${props.darkMode ? 'border-gray-700' : 'border-gray-200'}`}
+        >
+          <ul className="flex flex-col w-full text-center">
+            <li className={`border-b ${props.darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+              <Link 
+                to="/" 
+                className="block w-full px-6 py-4 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300" 
                 onClick={toggleMenu}
               >
                 Home
               </Link>
             </li>
-            <li>
-              <Link
-                to="/about"
-                className={`hover:text-blue-500 transition duration-300 ${props.darkMode ? 'text-white' : 'text-black'}`}
+            <li className={`border-b ${props.darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+              <Link 
+                to="/About" 
+                className="block w-full px-6 py-4 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300" 
                 onClick={toggleMenu}
               >
                 About
               </Link>
             </li>
-            <li>
-              <Link
-                to="/projects"
-                className={`hover:text-blue-500 transition duration-300 ${props.darkMode ? 'text-white' : 'text-black'}`}
+            <li className={`border-b ${props.darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+              <Link 
+                to="/Projects" 
+                className="block w-full px-6 py-4 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300" 
                 onClick={toggleMenu}
               >
                 Projects
               </Link>
             </li>
-            <li>
-              <Link
-                to="/contact"
-                className={`hover:text-blue-500 transition duration-300 ${props.darkMode ? 'text-white' : 'text-black'}`}
+            <li className={`border-b ${props.darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+              <Link 
+                to="/Contact" 
+                className="block w-full px-6 py-4 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300" 
                 onClick={toggleMenu}
               >
                 Contact
               </Link>
+            </li>
+            
+            {/* Dark Mode Toggle */}
+            <li className="py-4 px-6">
+              <div className="flex items-center justify-center space-x-3">
+                <span className={`text-sm font-medium ${
+                  props.darkMode ? 'text-gray-300' : 'text-gray-600'
+                }`}>
+                  Light
+                </span>
+                <button
+                  onClick={props.toggleDarkMode}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+                    props.darkMode ? 'bg-blue-500' : 'bg-gray-300'
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-transform ${
+                      props.darkMode ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
+                </button>
+                <span className={`text-sm font-medium ${
+                  props.darkMode ? 'text-gray-300' : 'text-gray-600'
+                }`}>
+                  Dark
+                </span>
+              </div>
             </li>
           </ul>
         </div>
