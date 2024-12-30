@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../Navbar';            // Correct relative path
 import Footer from '../Footer';            // Correct relative path
 import MainContent from '../MainContent';  // Correct relative path
-import Card from '../Card';                // Correct relative path
+import Card from '../render/ProgrammingCard';                // Correct relative path
 import cardData from '../Data/cardData'    // Correct relative path
 
 function Home() {

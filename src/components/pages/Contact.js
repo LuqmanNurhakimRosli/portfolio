@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import Star from '../Star'
+import Star from '../render/Star'
 
 function Contact() {
   const [contact, setContact] = useState({
