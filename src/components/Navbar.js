@@ -16,51 +16,53 @@ function Navbar(props) {
           <img
             src="/images/brandLuqman.png"
             alt="Banner"
-            className="w-20 h-20 rounded-full"
+            className="w-12 h-12 md:w-20 md:h-20 rounded-full"
           />
-          <h1 className="text-2xl font-bold">Luqman Nurhakim</h1>
+          <h1 className="text-xl md:text-2xl font-bold">Luqman Nurhakim</h1>
         </div>
 
-        {/* Navigation Links for Desktop */}
-        <ul className="hidden md:flex space-x-6 font-bold">
-          <li>
-            <Link to="/" className="hover:text-blue-500 transition duration-300">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="hover:text-blue-500 transition duration-300">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/projects" className="hover:text-blue-500 transition duration-300">
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="hover:text-blue-500 transition duration-300">
-              Contact
-            </Link>
-          </li>
-        </ul>
+        {/* Navigation Links and Dark Mode Toggle */}
+        <div className="hidden md:flex items-center space-x-6">
+          <ul className="flex space-x-6 font-bold">
+            <li>
+              <Link to="/" className="hover:text-blue-500 transition duration-300">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-blue-500 transition duration-300">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/projects" className="hover:text-blue-500 transition duration-300">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-blue-500 transition duration-300">
+                Contact
+              </Link>
+            </li>
+          </ul>
 
-        {/* Dark Mode Toggle */}
-        <div className="flex items-center space-x-2">
-          <p className="text-sm">Light</p>
-          <div
-            className={`w-10 h-5 flex items-center rounded-full p-1 cursor-pointer ${
-              props.darkMode ? 'bg-blue-500' : 'bg-gray-300'
-            }`}
-            onClick={props.toggleDarkMode}
-          >
+          {/* Dark Mode Toggle */}
+          <div className="flex items-center space-x-2">
+            <p className="text-sm">Light</p>
             <div
-              className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
-                props.darkMode ? 'translate-x-5' : 'translate-x-0'
+              className={`w-10 h-5 flex items-center rounded-full p-1 cursor-pointer ${
+                props.darkMode ? 'bg-blue-500' : 'bg-gray-300'
               }`}
-            ></div>
+              onClick={props.toggleDarkMode}
+            >
+              <div
+                className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
+                  props.darkMode ? 'translate-x-5' : 'translate-x-0'
+                }`}
+              ></div>
+            </div>
+            <p className="text-sm">Dark</p>
           </div>
-          <p className="text-sm">Dark</p>
         </div>
 
         {/* Mobile Menu Button */}
@@ -86,25 +88,41 @@ function Navbar(props) {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-800 text-white">
+        <div className={`md:hidden ${props.darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
           <ul className="flex flex-col items-center space-y-4 py-4">
             <li>
-              <Link to="/" className="hover:text-blue-500 transition duration-300" onClick={toggleMenu}>
+              <Link
+                to="/"
+                className={`hover:text-blue-500 transition duration-300 ${props.darkMode ? 'text-white' : 'text-black'}`}
+                onClick={toggleMenu}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-blue-500 transition duration-300" onClick={toggleMenu}>
+              <Link
+                to="/about"
+                className={`hover:text-blue-500 transition duration-300 ${props.darkMode ? 'text-white' : 'text-black'}`}
+                onClick={toggleMenu}
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link to="/projects" className="hover:text-blue-500 transition duration-300" onClick={toggleMenu}>
+              <Link
+                to="/projects"
+                className={`hover:text-blue-500 transition duration-300 ${props.darkMode ? 'text-white' : 'text-black'}`}
+                onClick={toggleMenu}
+              >
                 Projects
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-blue-500 transition duration-300" onClick={toggleMenu}>
+              <Link
+                to="/contact"
+                className={`hover:text-blue-500 transition duration-300 ${props.darkMode ? 'text-white' : 'text-black'}`}
+                onClick={toggleMenu}
+              >
                 Contact
               </Link>
             </li>
