@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Footer() {
+function Footer(props) {
   return (
-    <footer className='bg-gray-800 text-white py-8'>
+    <footer className='bg-gray-800 text-white py-8 {props.darkMode ? "bg-black text-white" : "bg-white text-black" } '>
       <div className='w-full p-4'>
         <div className='max-w-4xl mx-auto'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20'>

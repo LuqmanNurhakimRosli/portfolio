@@ -6,6 +6,9 @@ import Card from '../render/ProgrammingCard';                // Correct relative
 import cardData from '../Data/cardData'    // Correct relative path
 
 function Home() {
+    const [darkMode, setDarkMode] = React.useState(true);
+
+    
     const cardArray = cardData.map(card => {
         return <Card key={card.id} card={card} />
     })
@@ -26,7 +29,7 @@ function Home() {
                     </div>
                 </div>
             </main>
-            <Footer />
+            <Footer darkMode={darkMode} />
         </div>
     );
 }
