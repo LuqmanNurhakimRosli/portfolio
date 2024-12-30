@@ -5,6 +5,12 @@ import Footer from '../Footer'
 import WindowTracker from '../playground/WindowTracker'
 
 function About() {
+    const [darkMode, setDarkMode] = React.useState(true);
+
+    function toggleDarkMode(){
+        setDarkMode(prevDarkMode => !prevDarkMode);
+    }
+
 
 
   const [kira, setKira] = useState(0)
@@ -34,7 +40,7 @@ function About() {
 
   return (
     <section className='min-h-screen flex flex-col bg-gray-100'>
-      <Navbar />
+            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       
 
       <div className='flex-grow container mx-auto p-8'>
@@ -73,7 +79,7 @@ function About() {
       
     </div>
 
-      <Footer />
+    <Footer darkMode={darkMode} />
     </section>
   )
 }
