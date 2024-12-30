@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
+import WindowTracker from '../playground/WindowTracker'
 
 function About() {
 
@@ -66,7 +67,12 @@ function About() {
           </Link>
         </button>
       </div>
+
+      <div className='mt-8'>
+      <WindowTracker />
       
+    </div>
+
       <Footer />
     </section>
   )
