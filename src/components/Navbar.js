@@ -81,8 +81,8 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-blue-500 transition duration-300" onClick={toggleMenu}>
-                Services
+              <Link to="/projects" className="hover:text-blue-500 transition duration-300" onClick={toggleMenu}>
+                Projects
               </Link>
             </li>
             <li>
