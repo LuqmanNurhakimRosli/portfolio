@@ -5,6 +5,11 @@ import memesData from '../Data/memesData'
 import { downloadMeme } from '../memeDownload'
 
 function MemePage() {
+  const [darkMode, setDarkMode] = React.useState(true);
+  
+      function toggleDarkMode(){
+          setDarkMode(prevDarkMode => !prevDarkMode);
+      }
   // const [meme, setMeme] = React.useState("")
   const [meme,setMeme] = useState({
     topText:'',
@@ -40,7 +45,7 @@ function MemePage() {
 
   return (
     <section>
-      <Navbar />
+            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
 
       <div className='container mx-auto p-8 flex justify-center'>
         <form className='w-full max-w-lg bg-white p-8 rounded-lg shadow-md'>
@@ -121,8 +126,8 @@ function MemePage() {
       </div>
 
 
-      <Footer />
-    </section>
+      <Footer darkMode={darkMode} />
+      </section>
   )
 }
 
