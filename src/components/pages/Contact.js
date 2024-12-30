@@ -5,6 +5,10 @@ import Star from '../render/Star'
 
 function Contact() {
   const [darkMode, setDarkMode] = React.useState(true);
+  function toggleDarkMode(){
+    setDarkMode(prevDarkMode => !prevDarkMode);
+}
+
   const [contact, setContact] = useState({
     name: "Luqman Nurhakim",
     email: "luqmanrosli907@gmail.com",
@@ -21,7 +25,7 @@ function Contact() {
 
   const [isDarkMode, setIsDarkMode] = useState(false)
 
-  const toggleDarkMode = () => {
+  const toggleDarkModes = () => {
     setIsDarkMode(!isDarkMode)
   }
 
@@ -45,7 +49,7 @@ function Contact() {
       <div className='flex justify-center mb-8'>
         <button
           className={`px-4 py-2 font-semibold rounded ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white'}`}
-          onClick={toggleDarkMode}
+          onClick={toggleDarkModes}
         >
           Toggle Dark Mode
         </button>

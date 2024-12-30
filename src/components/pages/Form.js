@@ -3,6 +3,12 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 
 function Form() {
+      const [darkMode, setDarkMode] = React.useState(true);
+  
+      function toggleDarkMode(){
+          setDarkMode(prevDarkMode => !prevDarkMode);
+      }
+      
   const [dataForm, setDataForm] = useState 
   ({ firstName: '', lastName:'',email:'', 
     comment:'',status : false, statusStudent:'', color:''})
@@ -44,8 +50,8 @@ function handleSubmit(event) {
 
   return (
     <div className='min-h-screen flex flex-col bg-gray-100'>
-      <Navbar />
-      <div className='container mx-auto p-8'>
+            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+            <div className='container mx-auto p-8'>
         <h1 className='text-3xl font-bold text-center mb-8'>Form Page</h1>
 
         <form onSubmit={handleSubmit} className='max-w-md mx-auto bg-white p-8 rounded-lg shadow-md'>
@@ -212,8 +218,8 @@ function handleSubmit(event) {
 
         </form>
       </div>
-      <Footer />
-    </div>
+      <Footer darkMode={darkMode} />
+      </div>
 )
 }
 
