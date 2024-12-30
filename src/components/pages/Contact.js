@@ -4,6 +4,7 @@ import Footer from '../Footer'
 import Star from '../render/Star'
 
 function Contact() {
+  const [darkMode, setDarkMode] = React.useState(true);
   const [contact, setContact] = useState({
     name: "Luqman Nurhakim",
     email: "luqmanrosli907@gmail.com",
@@ -20,14 +21,14 @@ function Contact() {
 
   const [isDarkMode, setIsDarkMode] = useState(false)
 
-  const darkMode = () => {
+  const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode)
   }
 
   return (
     <section className={`min-h-screen flex flex-col ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-white'}`}>
-      <Navbar />
-      <article className={`bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-lg shadow-lg mx-auto w-80 my-8  `}>
+            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+            <article className={`bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-lg shadow-lg mx-auto w-80 my-8  `}>
         <h1 className='text-4xl font-bold text-center mb-8'>About Me</h1>
         <div className='flex justify-center mb-4'>
           <img src='/images/gambar-luqman.jpg' alt='Profile' className='w-32 h-32 rounded-full shadow-md' />
@@ -44,12 +45,12 @@ function Contact() {
       <div className='flex justify-center mb-8'>
         <button
           className={`px-4 py-2 font-semibold rounded ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white'}`}
-          onClick={darkMode}
+          onClick={toggleDarkMode}
         >
           Toggle Dark Mode
         </button>
       </div>
-      <Footer />
+      <Footer darkMode={darkMode} />
     </section>
   )
 }
