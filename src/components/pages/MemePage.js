@@ -49,24 +49,40 @@ function MemePage() {
       
       <div className='container mx-auto px-4 py-8'>
         <form className='max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg'>
-          <div className='grid grid-cols-1 gap-4 mb-6'>
+        <div className='grid grid-cols-1 gap-4 mb-6'>
+          <div className="space-y-2">
+            <label 
+              htmlFor="topText" 
+              className="block text-xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-600 transition-all duration-300"            >
+              Top Text
+            </label>
             <input 
+              id="topText"
               type='text'
-              placeholder='Top text'
-              className='border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 focus:border-transparent'
+              placeholder='Enter top text'
+              className='w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 focus:border-transparent'
               name='topText'
               value={meme.topText}
               onChange={handleChange}
             />
-            
-            <input 
-              type='text'
-              placeholder='Bottom text'
-              className='border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 focus:border-transparent'
-              name='bottomText'
-              value={meme.bottomText}
-              onChange={handleChange}
-            />
+          </div>
+  
+            <div className="space-y-2">
+              <label 
+                htmlFor="bottomText" 
+                className="block text-xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-600 transition-all duration-300"    >
+                Bottom Text
+              </label>
+              <input 
+                id="bottomText"
+                type='text'
+                placeholder='Enter bottom text'
+                className='w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-indigo-500 focus:border-transparent'
+                name='bottomText'
+                value={meme.bottomText}
+                onChange={handleChange}
+              />
+            </div>
           </div>
   
           <button
