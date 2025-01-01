@@ -15,10 +15,10 @@ export const projectsData = [
   },
   {
     id: 3,
-    title: "Coming Soon",
-    description: "...coming",
-    image: "/images/projects/catPlay.png",
-    path: "/CatPlay"
+    title: "Tenzies Game",
+    description: "Tenzies is a fun and engaging dice game where the objective is to roll the dice until all of them show the same number.",
+    image: "/images/projects/tenzies.png",
+    path: "https://tenzies-game-silk-seven.vercel.app/"
   },
   
 ];
