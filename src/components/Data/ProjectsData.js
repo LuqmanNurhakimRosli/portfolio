@@ -18,7 +18,7 @@ export const projectsData = [
     title: "Tenzies Game",
     description: "An interactive dice game where players roll and hold dice to match numbers",
     image: "/images/projects/tenziesGame.png",
-    path: "/CatPlay"
+    path: "https://tenzies-game-silk-seven.vercel.app/"
   },
   
 ];
