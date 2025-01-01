@@ -15,9 +15,9 @@ export const projectsData = [
   },
   {
     id: 3,
-    title: "Coming Soon",
-    description: "...coming",
-    image: "/images/projects/catPlay.png",
+    title: "Tenzies Game",
+    description: "An interactive dice game where players roll and hold dice to match numbers",
+    image: "/images/projects/tenziesGame.png",
     path: "/CatPlay"
   },
   
