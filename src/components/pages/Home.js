@@ -23,7 +23,7 @@ function Home() {
       <main className="flex-grow">
         <MainContent darkMode={darkMode} />
         <div className="text-center bg-stone-600 py-8">
-          <h1 className="font-mono text-4xl text-white pt-4">
+          <h1 className="font-mono text-4xl text-white pt-4n">
             Programming Languages
           </h1>
           <motion.div
