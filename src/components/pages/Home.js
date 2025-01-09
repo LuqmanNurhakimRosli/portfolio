@@ -7,7 +7,7 @@ import cardData from '../Data/cardData';
 import { motion } from 'framer-motion';
 
 function Home() {
-  const [darkMode, setDarkMode] = React.useState(true);
+  const [darkMode, setDarkMode] = React.useState(false);
 
   function toggleDarkMode() {
     setDarkMode((prevDarkMode) => !prevDarkMode);
