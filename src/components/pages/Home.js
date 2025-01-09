@@ -21,7 +21,7 @@ function Home() {
         <div className='min-h-screen flex flex-col'>
             <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
             <main className='flex-grow'>
-                <MainContent />
+                <MainContent darkMode={darkMode} />
                 <div className='text-center bg-stone-600 py-8'>
                     <h1 className='font-mono text-4xl text-white pt-4'>
                         Programming Language
