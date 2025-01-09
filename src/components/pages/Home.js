@@ -22,7 +22,7 @@ function Home() {
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main className="flex-grow">
         <MainContent darkMode={darkMode} />
-        <div className="text-center bg-stone-600 py-8">
+        <div className="text-center bg-stone-600 py-8 s">
           <h1 className="font-mono text-4xl text-white pt-4">
             Programming Languages
           </h1>
