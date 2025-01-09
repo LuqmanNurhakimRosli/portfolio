@@ -24,7 +24,7 @@ function Home() {
         <MainContent darkMode={darkMode} />
         <div className="text-center bg-stone-600 py-8">
           <h1 className="font-mono text-4xl text-white pt-4">
-            Programming Language
+            Programming Languages
           </h1>
           <motion.div
             className="flex justify-center"
