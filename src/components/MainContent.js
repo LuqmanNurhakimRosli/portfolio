@@ -95,7 +95,7 @@ function MainContent(props) {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="text-lg md:text-xl max-w-2xl mx-auto"
           >
-            Currently having internship in Dagang Net Technologies Sdn Bhd, Cyberjaya.
+            My favourite music genre is called 'Thanatos'
           </motion.p>
         </div>
       </div>

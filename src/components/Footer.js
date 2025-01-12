@@ -16,8 +16,9 @@ function Footer({ darkMode }) {
           <div className="space-y-4">
             <h2 className="text-xl font-bold">About Me</h2>
             <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm leading-relaxed`}>
-              Currently interning at Dagang Net Technologies in Cyberjaya. 
-              Passionate about web development and creating innovative solutions.
+            Currently a hardworking and smart student, 
+            dedicated to mastering web development and creating innovative solutions.
+
             </p>
           </div>
 
