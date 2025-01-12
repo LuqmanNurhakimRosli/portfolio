@@ -13,9 +13,13 @@ function Home() {
     setDarkMode((prevDarkMode) => !prevDarkMode);
   }
 
-  const cardArray = cardData.map((card) => (
+  // const cardArray = cardData.map((card) => (
+  //   <Card key={card.id} card={card} />
+  // ));
+  const cardArray = cardData.filter((card) => card.status !== 'hidden' )
+  .map((card) => (
     <Card key={card.id} card={card} />
-  ));
+  ))
 
   return (
     <div className="min-h-screen flex flex-col">
