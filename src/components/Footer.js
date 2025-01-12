@@ -60,7 +60,7 @@ function Footer({ darkMode }) {
               <div className="flex items-center space-x-2">
                 <FaEnvelope className="text-blue-500" />
                 <a href="mailto:luqman@dagangnet.com" className="text-sm hover:underline">
-                  luqman@dagangnet.com
+                  Email me now
                 </a>
               </div>
               <div className="flex items-center space-x-2">
