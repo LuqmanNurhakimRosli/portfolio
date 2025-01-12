@@ -17,9 +17,9 @@ function Card(props) {
         alt={props.card.title}
         className="mx-auto w-16 h-16 object-contain mb-2"
       />
-      <div className="border bg-white border-gray-300 rounded-lg shadow-lg font-semibold text-base text-black px-6 w-fit mx-auto">
+      {/* <div className="border bg-white border-gray-300 rounded-lg shadow-lg font-semibold text-base text-black px-6 w-fit mx-auto">
         {info}
-      </div>
+      </div> */}
       <div>
         <h2 className="text-xl font-semibold">{props.card.title}</h2>
       </div>

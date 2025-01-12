@@ -13,13 +13,11 @@ function Home() {
     setDarkMode((prevDarkMode) => !prevDarkMode);
   }
 
-  // const cardArray = cardData.map((card) => (
-  //   <Card key={card.id} card={card} />
-  // ));
-  const cardArray = cardData.filter((card) => card.status !== 'hidden' )
-  .map((card) => (
-    <Card key={card.id} card={card} />
-  ))
+  const cardArray = cardData.map((card) => {
+    const { status, ...rest } = card; // Destructure to remove `status`
+    return <Card key={card.id} card={rest} />;
+  });
+  
 
   return (
     <div className="min-h-screen flex flex-col">

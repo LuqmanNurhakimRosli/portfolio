@@ -64,4 +64,5 @@ export default [
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
         status: "Beginner"
     }
+    
 ];
