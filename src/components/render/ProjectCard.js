@@ -7,7 +7,7 @@ function ProjectCard({ title, description, image, path }) {
         <img 
           src={image}
           alt={title}
-          className="w-full h-48 object-cover"
+          className="w-full h-48 object-cover border-b-4 border-gray-300 "
         />
       </div>
       
@@ -18,7 +18,7 @@ function ProjectCard({ title, description, image, path }) {
           to={path}
           className="block w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded text-center transition duration-200"
         >
-          Try {title}
+          Enter {title}
         </Link>
       </div>
     </div>

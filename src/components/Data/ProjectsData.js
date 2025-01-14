@@ -20,5 +20,12 @@ export const projectsData = [
     image: "/images/projects/tenzies.png",
     path: "https://tenzies-game-silk-seven.vercel.app/"
   },
+  {
+    id: 4,
+    title: "Ping Energy Marketing Limited",
+    description: "A corporate website for a Malaysian energy trading company specializing in oil and gas commodities",
+    image: "/images/projects/peml.png",
+    path: "https://peml.vercel.app/"
+  },
   
 ];
