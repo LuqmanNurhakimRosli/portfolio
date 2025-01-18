@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter ,Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Home from './components/pages/Home.js';
 import Form from './components/pages/Form.js';
@@ -24,7 +24,7 @@ export default function App () {
       <Route path='/Form' element={<Form />} />
       <Route path='/MemePage' element={<MemePage />} />
       </Routes>
-      <Analytics />
+      <Analytics  />
     </div>
   )
 }
