@@ -45,7 +45,6 @@ function MemePage() {
 
   return (
     <section className={`min-h-screen flex flex-col ${darkMode ? 'bg-gray-500' : 'bg-gray-100'}`}>
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       
       <div className='container mx-auto px-4 py-8'>
         <form className='max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg'>
@@ -120,7 +119,6 @@ function MemePage() {
         </form>
       </div>
       
-      <Footer darkMode={darkMode} />
     </section>
   );
 }
