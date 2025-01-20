@@ -27,5 +27,11 @@ export const projectsData = [
     image: "/images/projects/peml.png",
     path: "https://peml.vercel.app/"
   },
-  
+  {
+    id: 5,
+    title: "VanLife",
+    description: "A van rental marketplace platform with user authentication and dynamic filtering system",
+    image: "/images/projects/vanlife.png",
+    path: "https://vanlife-sable.vercel.app/"
+  }
 ];
