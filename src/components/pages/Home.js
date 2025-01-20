@@ -9,9 +9,6 @@ import { motion } from 'framer-motion';
 function Home() {
   const [darkMode, setDarkMode] = React.useState(true);
 
-  function toggleDarkMode() {
-    setDarkMode((prevDarkMode) => !prevDarkMode);
-  }
 
   const cardArray = cardData.map((card) => {
     const { status, ...rest } = card; // Destructure to remove `status`
@@ -21,7 +18,6 @@ function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main className="flex-grow">
         <MainContent darkMode={darkMode} />
         <div className="text-center bg-stone-600 py-8">
@@ -40,7 +36,6 @@ function Home() {
           </motion.div>
         </div>
       </main>
-      <Footer darkMode={darkMode} />
     </div>
   );
 }
