@@ -40,7 +40,6 @@ function About() {
 
   return (
     <section className='min-h-screen flex flex-col bg-gray-100'>
-            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       
 
       <div className='flex-grow container mx-auto p-8'>
@@ -79,7 +78,6 @@ function About() {
       
     </div>
 
-    <Footer darkMode={darkMode} />
     </section>
   )
 }
