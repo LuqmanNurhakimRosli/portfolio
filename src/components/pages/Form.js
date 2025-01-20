@@ -50,7 +50,6 @@ function handleSubmit(event) {
 
   return (
     <div className='min-h-screen flex flex-col bg-gray-100'>
-            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
             <div className='container mx-auto p-8'>
         <h1 className='text-3xl font-bold text-center mb-8'>Form Page</h1>
 
@@ -218,7 +217,6 @@ function handleSubmit(event) {
 
         </form>
       </div>
-      <Footer darkMode={darkMode} />
       </div>
 )
 }
