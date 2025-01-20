@@ -12,7 +12,6 @@ function Projects() {
       }
   return (
     <section className="min-h-screen flex flex-col bg-gray-200">
-            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
             <div className="container mx-auto px-4 py-8 flex-grow">
         <h1 className="text-5xl font-extrabold text-center mb-12 tracking-tight">
           <span className="bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 text-transparent bg-clip-text">
@@ -30,7 +29,6 @@ function Projects() {
           ))}
         </div>
       </div>
-      <Footer darkMode={darkMode} />
       </section>
   );
 }
