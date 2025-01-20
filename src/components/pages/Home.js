@@ -1,13 +1,12 @@
 import React from 'react';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+
 import MainContent from '../MainContent';
 import Card from '../render/ProgrammingCard';
 import cardData from '../Data/cardData';
 import { motion } from 'framer-motion';
 
 function Home() {
-  const [darkMode, setDarkMode] = React.useState(true);
+  const darkMode = true;
 
 
   const cardArray = cardData.map((card) => {
