@@ -1,6 +1,5 @@
 import React from 'react'
-import Navbar from '../Navbar'
-import Footer from '../Footer'
+
 import { projectsData } from '../Data/ProjectsData'
 import ProjectCard from '../render/ProjectCard'
 
