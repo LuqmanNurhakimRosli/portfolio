@@ -18,6 +18,8 @@ function MainContent(props) {
   }, [words.length]);
 
   return (
+    <secton>
+
     <section
       className={`flex flex-col items-center justify-center min-h-screen px-4 py-12 text-center ${
         props.darkMode ? 'bg-gray-800 text-white' : 'bg-gray-100 text-black'
@@ -100,6 +102,13 @@ function MainContent(props) {
         </div>
       </div>
     </section>
+
+      <section>
+        
+      </section>
+
+    </secton>
+
   );
 }
 

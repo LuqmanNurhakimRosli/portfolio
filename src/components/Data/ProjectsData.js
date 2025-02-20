@@ -33,5 +33,12 @@ export const projectsData = [
     description: "A van rental marketplace platform with user authentication and dynamic filtering system",
     image: "/images/projects/vanlife.png",
     path: "https://vanlife-sable.vercel.app/"
+  },
+  {
+    id: 6,
+    title: "OwlScribe",
+    description: "A modern and interactive blogging platform that enables users to explore, comment, and engage with insightful content. ",
+    image: "/images/projects/owlscribe.png",
+    path: "https://owlscribe.vercel.app/"
   }
 ];
